@@ -159,7 +159,7 @@ def get_percent_change7d(url)
     return tab_percent_change7d
 end
 
-url_coin_market = "AllCryptocurrencies_CoinMarketCap.html"
+url_coin_market = "https://coinmarketcap.com/all/views/all/"
 
 
 titre = get_titre(url_coin_market)
