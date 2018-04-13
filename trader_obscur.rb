@@ -149,6 +149,9 @@ end
 #===============================================
 
 #Récupère le %7d OK
+def get_percent_change7d(url)
+    page = Nokogiri::HTML(open(url))
+    tab_percent_change7d = []
     match_percent_change = page.css("td").select{|p_change| p_change["data-timespan"] == "7d"}
     match_percent_change.each do |percent|
         tab_percent_change7d << percent.text
